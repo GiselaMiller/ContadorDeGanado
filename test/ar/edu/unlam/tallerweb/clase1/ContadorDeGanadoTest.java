@@ -23,5 +23,16 @@ public class ContadorDeGanadoTest {
 		Integer cantidadObtenida=miContador.mostrarCantidad();
 		Assert.assertEquals(cantidadEsperada, cantidadObtenida);
 	}
+	
+	@Test
+	public void testQuePuedaContarDeDosEnDos() {
+		ContadorDeGanado miContador = new ContadorDeGanado();
+		Integer cantidadEsperada=2;
+		miContador.contar();
+		Integer cantidadObtenida=miContador.mostrarCantidad();
+		Integer cantidadObtenida2=cantidadObtenida+1;
+		Assert.assertEquals(cantidadEsperada, cantidadObtenida2);
+		miContador = null;		
+	}
 
 }
